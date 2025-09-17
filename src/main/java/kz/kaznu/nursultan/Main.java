@@ -16,7 +16,7 @@ public class Main {
             checkSign(1, 2, 3);
         }
         if (result == 3) {
-            selectColour();
+            selectColour(100);
         }
         if (result == 4) {
             compareNumbers(1, 2);
@@ -24,7 +24,7 @@ public class Main {
         if (result == 5) {
             addOrSubtractAndPrint(1, 2, true);
         }
-        if (result != 1 && result != 2 && result != 3 && result != 4 && result != 5) {
+        if (result < 1 || result > 5) {
             System.out.println("No method");
         }
     }
@@ -42,8 +42,7 @@ public class Main {
         }
     }
 
-    public static void selectColour() {
-        int data = 100;
+    public static void selectColour(int data) {
         if (data <= 10) {
             System.out.println("Красный");
         }
